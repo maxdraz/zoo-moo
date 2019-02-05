@@ -6,6 +6,8 @@ TagManager:
   tags:
   - death
   - ground
+  - item
+  - fly
   layers:
   - Default
   - TransparentFX
