@@ -11,6 +11,12 @@ public class powerUpMan : MonoBehaviour
     [SerializeField] private PowerUpManager _powerUpManager;
 
     [SerializeField] private GameObject _wings;
+
+    private bool holdingItem;
+    private int itemIndex = 0;
+    private GameObject overheadItem;
+    [SerializeField] private Transform overheadItemPos;
+
     // Use this for initialization
     void Start()
     {
@@ -25,9 +31,28 @@ public class powerUpMan : MonoBehaviour
     {
         if (other.tag == "fly")
         {
-            StartCoroutine("Fly", _flyTime);
+            holdingItem = true;
+            itemIndex = 1;
             other.gameObject.SetActive(false);
+            GameObject miniItem = _powerUpManager.indexToOverheadItem(0);
+            overheadItem = Instantiate(miniItem, overheadItemPos);
+            overheadItem.transform.localScale += new Vector3(-0.35f, -0.35f, -0.35f);
+            overheadItem.GetComponent<BoxCollider>().enabled = false;
+            Invoke("PowerUpManagerCaller", 10);
+        }
+    }
 
+    private void Update()
+    {
+        if (Input.GetAxisRaw("Vertical") == -1 && holdingItem == true)
+        {
+            if (itemIndex == 1)
+            {
+                itemIndex = 0;
+                holdingItem = false;
+                Destroy(overheadItem);
+                StartCoroutine("Fly", _flyTime);
+            }
         }
     }
 
@@ -39,7 +64,7 @@ public class powerUpMan : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         _wings.SetActive(false);
-        Invoke("PowerUpManagerCaller", 10);
+        
     }
 
     private void PowerUpManagerCaller()
