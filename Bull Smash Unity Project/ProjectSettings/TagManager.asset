@@ -8,6 +8,7 @@ TagManager:
   - ground
   - item
   - fly
+  - wall
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - Wall
   - 
   - 
   - 
