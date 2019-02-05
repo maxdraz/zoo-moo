@@ -387,7 +387,6 @@ GameObject:
   - component: {fileID: 95642132013358918}
   - component: {fileID: 111288504913400626}
   - component: {fileID: 114223066757405334}
-  - component: {fileID: 954399400}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -579,20 +578,6 @@ MonoBehaviour:
   UI: {fileID: 0}
   respawn: {fileID: 0}
   respawnTime: 3
---- !u!114 &954399400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790978357475790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1f960ce1d97a144bd69edf01c6a2e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _flyTime: 3
-  _powerUpManager: {fileID: 0}
 --- !u!1 &1982442256036004
 GameObject:
   m_ObjectHideFlags: 0
