@@ -241,6 +241,13 @@ MonoBehaviour:
   _flyTime: 4
   _powerUpManager: {fileID: 163152698}
   _wings: {fileID: 481968296}
+  overheadItemPos: {fileID: 1158885614}
+--- !u!4 &128253949 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4547242294323336, guid: d40d704fca68a3e4ea225f49591134ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 75834418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163152697
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +528,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 804046350}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &474269297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474269298}
+  m_Layer: 0
+  m_Name: Overhead Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474269298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474269297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954399399}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481968296 stripped
 GameObject:
@@ -1052,6 +1089,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 546007842}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &954399399 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4813052579192018, guid: e919e2c6c3860504ba419807ebc73854,
+    type: 3}
+  m_PrefabInstance: {fileID: 546007842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &954399400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1110,7 @@ MonoBehaviour:
   _flyTime: 3
   _powerUpManager: {fileID: 163152698}
   _wings: {fileID: 290772758}
+  overheadItemPos: {fileID: 474269298}
 --- !u!1 &1103807919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1234,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   android: {fileID: 12800000, guid: 31c8273279d18ed428768e88ccf1b466, type: 3}
+--- !u!1 &1158885613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158885614}
+  m_Layer: 0
+  m_Name: Overhead Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158885614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158885613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 128253949}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267191801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440639279201995391, guid: 9f76c346095428c43a67880e77042b07,
+        type: 3}
+      propertyPath: m_TagString
+      value: fly
       objectReference: {fileID: 0}
     - target: {fileID: 440639279201995363, guid: 9f76c346095428c43a67880e77042b07,
         type: 3}
