@@ -199,8 +199,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114557116071317162, guid: d40d704fca68a3e4ea225f49591134ed, type: 3}
+    - target: {fileID: 1801033281, guid: d40d704fca68a3e4ea225f49591134ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d40d704fca68a3e4ea225f49591134ed, type: 3}
 --- !u!1 &128253937 stripped
 GameObject:
@@ -237,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyTime: 4
   _powerUpManager: {fileID: 163152698}
+  _wings: {fileID: 481968296}
 --- !u!1 &163152697
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +364,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &290772758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1920740081, guid: e919e2c6c3860504ba419807ebc73854,
+    type: 3}
+  m_PrefabInstance: {fileID: 546007842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418071078
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +522,12 @@ Transform:
   m_Father: {fileID: 804046350}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &481968296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1801033281, guid: d40d704fca68a3e4ea225f49591134ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 75834418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505928234
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +621,10 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920740081, guid: e919e2c6c3860504ba419807ebc73854, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e919e2c6c3860504ba419807ebc73854, type: 3}
@@ -1046,6 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyTime: 3
   _powerUpManager: {fileID: 163152698}
+  _wings: {fileID: 290772758}
 --- !u!1 &1103807919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1582,7 @@ GameObject:
   - component: {fileID: 1692456691}
   - component: {fileID: 1692456690}
   - component: {fileID: 1692456689}
+  - component: {fileID: 1692456693}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1640,6 +1662,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 31.598001, y: -48.962, z: -2.15}
+--- !u!114 &1692456693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692456688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e2bfe5b197c33a443be3fe8824d5e20a, type: 2}
 --- !u!1 &1936139416
 GameObject:
   m_ObjectHideFlags: 0

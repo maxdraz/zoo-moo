@@ -9,6 +9,8 @@ public class powerUpMan : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] private PowerUpManager _powerUpManager;
+
+    [SerializeField] private GameObject _wings;
     // Use this for initialization
     void Start()
     {
@@ -31,10 +33,12 @@ public class powerUpMan : MonoBehaviour
 
     IEnumerator Fly(float t)
     {
+        _wings.SetActive(true);
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         yield return new WaitForSeconds(t);
         rb.constraints = RigidbodyConstraints.None;
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        _wings.SetActive(false);
         Invoke("PowerUpManagerCaller", 10);
     }
 
